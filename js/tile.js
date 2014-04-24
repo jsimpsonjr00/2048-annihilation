@@ -1,8 +1,9 @@
-function Tile(position, value) {
+function Tile(position, value, canMerge) {
   this.x                = position.x;
   this.y                = position.y;
   this.value            = value || 2;
-
+  this.canMerge         = canMerge || true; //used to make the goal tile only annihilate
+  
   this.previousPosition = null;
   this.mergedFrom       = null; // Tracks tiles that merged together
 }
